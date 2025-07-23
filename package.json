@@ -3,9 +3,13 @@
   "version": "1.0.0",
   "main": "index.js",
   "type": "module",
+  "jest": {
+  "testEnvironment": "node",
+  "transform": {}
+},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon src/index.js"
+    "dev": "nodemon src/index.js",
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
   },
   "keywords": [],
   "author": "",
@@ -21,6 +25,9 @@
     "mongoose": "^8.16.3"
   },
   "devDependencies": {
-    "nodemon": "^3.1.10"
+    "jest": "^30.0.4",
+    "mongodb-memory-server": "^10.1.4",
+    "nodemon": "^3.1.10",
+    "supertest": "^7.1.3"
   }
 }
